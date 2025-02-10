@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Data</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+        h1 { color: #333; }
+        table { border-collapse: collapse; width: 100%; background: #fff; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background: #333; color: #fff; }
+        tr:nth-child(even) { background: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>Extracted Book Data</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Availability</th>
+        </tr>
+        {% for book in books %}
+        <tr>
+            <td>{{ book["Title"] }}</td>
+            <td>{{ book["Price"] }}</td>
+            <td>{{ book["Availability"] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
